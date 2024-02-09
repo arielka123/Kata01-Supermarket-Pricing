@@ -1,5 +1,7 @@
 package Kata01.Strategy;
 
 public interface IStrategy {
-    Double getTotalPrice();
+    double getTotalPrice();
+    int getPayedQuantity();
+    int getOrderedQuantity();
 }

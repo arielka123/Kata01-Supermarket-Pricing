@@ -9,9 +9,9 @@ import static org.hamcrest.Matchers.not;
 class StandardStrategyTest {
 
     @org.junit.jupiter.api.Test
-    void getTotalPriceFor() {
+    void getTotalPrice() {
         //given
-        IStrategy standardStrategy = new StandardStrategy(new OrderItem(2.0, 3));
+        StandardStrategy standardStrategy = new StandardStrategy(new OrderItem(2.0, 3));
         //when
         double totalPrice = standardStrategy.getTotalPrice();
         //then
