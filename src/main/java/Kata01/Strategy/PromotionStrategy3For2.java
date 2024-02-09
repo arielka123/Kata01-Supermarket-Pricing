@@ -16,18 +16,17 @@ public class PromotionStrategy3For2 implements IStrategy {
 
     @Override
     public double getTotalPrice() {
-        payedQuantity= orderedQuantity;
+
+        payedQuantity = orderedQuantity;
         counter = orderedQuantity;
 
-        while (counter >2){
-           counter = counter -3;
-           payedQuantity=payedQuantity-1;
-           bonusQuantity ++;
-       }
-
-        System.out.println("Bonusowa ilośc: "+bonusQuantity);
-        System.out.println("Zapłacono za: "+payedQuantity);
-        return payedQuantity *itemPrice;
+        while (counter > 2) {
+            counter = counter - 3;
+            payedQuantity = payedQuantity - 1;
+            bonusQuantity++;
+        }
+        //nie ma potrzeby liczenia ceny produktu po promocji poniewaz liczy sie koszt zamówienia dla księgowości
+        return payedQuantity * itemPrice;
     }
 
     @Override
@@ -39,4 +38,5 @@ public class PromotionStrategy3For2 implements IStrategy {
     public int getOrderedQuantity() {
         return this.orderedQuantity;
     }
+
 }

@@ -27,4 +27,5 @@ public class StandardStrategy implements IStrategy {
     public int getOrderedQuantity() {
         return this.orderedQuantity;
     }
+
 }
